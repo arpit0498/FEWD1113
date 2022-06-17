@@ -1,0 +1,10 @@
+/*  
+Iteration 6: Style the video subtitles with css  */
+   #sample_video::cue {
+        background-color: #d3ffc0;
+        color: #ffc0cb;
+        outline-style: solid;
+        outline-color: #ff5d7a;
+        font-size: 32px;
+        font-family: "Times New Roman", cursive;
+      }

@@ -2,24 +2,20 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <title>HTML5 video caption/subtitle demo</title>
-    <style>
-      video::cue {
-        opacity: 1;
-        background-color: rgb(0, 0, 0);
-        font-size: 20px !important;
-      }
-    </style>
+    <title>Technology</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Tech Talkies</h1>
+    <h1>Emerging Tech & Talks</h1>
     <div class="container">
       <div class="video">
-        <!-- video with subtitle -->
-        <!-- html markup and track -->
+        <!--Iteration 1: Insert video with subtitle along with essential attributes -->
+        <!--Iteration 2: Html markup and track -->
+        <!--video link: https://www.dropbox.com/s/xvjem6er1pp1usy/MicrosoftInclusiveHiring.mp4?raw=1 -->
+        <!-- subtitle link :https://www.dropbox.com/s/ipnbojfe0jtz5n7/MicrosoftInclusiveHiringCHT.vtt?raw=1 -->
         <video
-          width="560"
-          height="315"
+          width="500"
+          height="500"
           poster="https://www.dropbox.com/s/04jvegnxbnm95l7/MicrosoftInclusiveHiring.jpg?raw=1"
           preload="auto"
           controls
@@ -39,9 +35,14 @@
             src="https://www.dropbox.com/s/ipnbojfe0jtz5n7/MicrosoftInclusiveHiringCHT.vtt?raw=1"
             default
           />
+
+          <!-- Iteration 3: Use of Iframe for embedding youtube video along with subtitles -->
+          <!-- video link : https://www.youtube.com/embed/c-o0IwYw-Tk?rel=0 -->
+          <!-- subtitles: check assets folder for microsoft notes -->
+
           <iframe
-            width="560"
-            height="315"
+            width="500"
+            height="500"
             src="https://www.youtube.com/embed/c-o0IwYw-Tk?rel=0"
             frameborder="0"
             allow="autoplay; encrypted-media"
@@ -87,18 +88,38 @@
           </iframe>
         </video>
       </div>
-
-      <hr />
-
+      <div class="style-subtitle">
+        <!-- Iteration 4: Use of styling the subtitles -->
+        <!-- Use video present in asset folder -->
+        <video id="sample_video" width="500" height="500" controls>
+          <source
+            src="./Assets/For Next-Generation Servers and Base Stations.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="./Assets/For Next-Generation Servers and Base Stations.webm"
+            type="video/webm"
+          />
+          <track
+            label="English"
+            kind="subtitles"
+            srclang="en"
+            src="./Assets/For Next-Generation Servers and Base Stations.vtt"
+            default
+          />
+        </video>
+      </div>
       <div class="video">
-        <!-- Youtube video embed -->
+        <!-- Iteration 5: use of iframe for embedding youTube video -->
+        <!-- Youtube video :https://www.youtube-nocookie.com/embed/MK3f0HBLg0Q?start=1 -->
         <iframe
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen=""
+          width="500"
+          height="500"
+          src="https://www.youtube-nocookie.com/embed/MK3f0HBLg0Q?start=1"
+          title="YouTube video player"
           frameborder="0"
-          height="315"
-          src="https://www.youtube.com/embed/qGN2zbic3JM?hl=no&cc_lang_pref=no&cc=1"
-          width="560"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
         ></iframe>
       </div>
     </div>
